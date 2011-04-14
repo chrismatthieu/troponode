@@ -35,7 +35,7 @@ app.post('/', function(req, res){
 	// use the on method https://www.tropo.com/docs/webapi/on.htm
 	tropo.on("continue", null, "/answer", true);
 
-    res.send(TropoJSON(tropo));
+    res.send(tropoapi.TropoJSON(tropo));
 });
 
 app.post('/answer', function(req, res){
@@ -43,7 +43,7 @@ app.post('/answer', function(req, res){
 	var tropo = new tropoapi.TropoWebAPI();
 	tropo.say("Your zip code is " + req.body['result']['actions']['interpretation']);
 
-	res.send(TropoJSON(tropo));
+	res.send(tropoapi.TropoJSON(tropo));
 });
 
 app.listen(8000);
