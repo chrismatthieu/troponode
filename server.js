@@ -31,7 +31,7 @@ app.post('/', function(req, res){
 
 	// Action classes can be passes as parameters to TropoWebAPI class methods.
 	// use the ask method https://www.tropo.com/docs/webapi/ask.htm
-	tropo.ask("[5 DIGITS]", 3, false, null, "foo", null, true, say, 5, null);
+	tropo.ask("[5 DIGITS]", 3, false, null, "foo", null, true, tropo.say, 5, null);
 	// use the on method https://www.tropo.com/docs/webapi/on.htm
 	tropo.on("continue", null, "/answer", true);
 
