@@ -1,0 +1,25 @@
+= TropoNode
+
+This is a demo app for running Tropo (http://tropo.com) Phone apps on Node.JS.
+
+= Requires
+
+npm install express
+npm install tropo-webapi
+
+= Deploy to Nodester
+
+nodester app create tropodemo
+nodester app init tropodemo
+cd tropodemo
+copy and paste server.js code
+nodester npm install express tropo-webapi
+git add .
+git commit -m "tropo app"
+git push
+
+= Setup Tropo
+
+Create a new Tropo WebAPI app
+Use URL http://tropodemo.nodester.com
+
