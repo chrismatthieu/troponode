@@ -15,6 +15,10 @@ app.configure(function(){
 	app.use(express.bodyParser());
 });
 
+app.get('/', function (req, res) {
+	res.send('app must be called from tropo');
+})
+
 app.post('/', function(req, res){
 	// Create a new instance of the TropoWebAPI object.
 	var tropo = new TropoWebAPI();
