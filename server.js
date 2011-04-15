@@ -42,7 +42,12 @@ app.post('/', function(req, res){
 app.post('/answer', function(req, res){
 	// Create a new instance of the TropoWebAPI object.
 	var tropo = new tropoapi.TropoWebAPI();
-	tropo.say("Your zip code is " + req.body['result']['actions']['interpretation']);
+	if req.body['result']['actions']['interpretation'] == undefined{
+		tropo.say("no data received");
+	}
+	else {
+		tropo.say("Your zip code is " + req.body['result']['actions']['interpretation']);
+	}
 
 	res.send(tropoapi.TropoJSON(tropo));
 });
