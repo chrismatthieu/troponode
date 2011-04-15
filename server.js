@@ -27,7 +27,8 @@ app.post('/', function(req, res){
 
 	// Demonstrates how to use the base Tropo action classes.
 	tropo.say("Please enter your 5 digit zip code.");
-	var choices = new tropoapi.Choices("[5 DIGITS]");
+	// var choices = new tropo.Choices("[5 DIGITS]");
+	var choices = {"value":"[4 DIGITS]"};
 
 	// Action classes can be passes as parameters to TropoWebAPI class methods.
 	// use the ask method https://www.tropo.com/docs/webapi/ask.htm
